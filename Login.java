@@ -107,6 +107,7 @@ public class Login extends JFrame implements ActionListener {
 
         if(enteredUsername.equals(usernameAccepted) && enteredPassword.equals(passwordAccepted)){
             JOptionPane.showMessageDialog(null, "Login efetuado com successo, bem vindo de volta " +usernameAccepted);
+            Tables tables = new Tables();
         }
         else{
             JOptionPane.showMessageDialog(null, "Usuário e/ou senha inválido(s)!");

@@ -100,18 +100,10 @@ public class Login extends JFrame implements ActionListener {
     }
 
     public void loginCheck(){
-        String usernameAccepted = "Vevetti";
-        String passwordAccepted = "123";
         String enteredUsername = usernameTextField.getText();
         String enteredPassword = new String(passwordTextField.getPassword());
-
-        if(enteredUsername.equals(usernameAccepted) && enteredPassword.equals(passwordAccepted)){
-            JOptionPane.showMessageDialog(null, "Login efetuado com successo, bem vindo de volta " +usernameAccepted);
-            Tables tables = new Tables();
-        }
-        else{
-            JOptionPane.showMessageDialog(null, "Usuário e/ou senha inválido(s)!");
-        }
+        UsersCrudBD usersCrudBD = new UsersCrudBD();
+        usersCrudBD.searchNamesAndPasswords(enteredUsername, enteredPassword);
     }
 
 }
